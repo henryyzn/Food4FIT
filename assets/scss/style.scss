@@ -433,31 +433,26 @@ a{
 //Homescreen
 
 /* CABEÇALHO INDEX */
-#header-flat{
+#header-index{
 	/*Container-mãe do cabeçalho da página index*/
 	@include bloco($width: 100%, $height: auto);
-	#header-flat-row1{
+	#header-index-content{
 		/*Container-filho do cabeçalh da indexo*/
 		@include bloco(100%, 100%, 300px, 300px);
 		overflow: hidden;
 		position: relative;
 		box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.1);
-		border-bottom-right-radius: 10px;
-		border-bottom-left-radius: 10px;
 		>img{
 			/*Imagem do cabeçalho da index*/
-			@include img-fit(1200px, 300px);
-			border-bottom-right-radius: 10px;
-			border-bottom-left-radius: 10px;
+			@include img-fit(100vw, 300px);
+			position: relative;			
 		}
-		#header-flat-overlay{
+		#header-index-overlay{
 			/*Overlay container do cabeçalho da index*/
-			@include bloco(100%, null, 100%);
-			@include position(absolute, 0, false, false, 0);
+			@include bloco(100%, 1200px, 100%);
+			@include position(absolute, 50%, false, false, 50%);
+			transform: translate(-50%, -50%);
 			@include display(flex, column, center, left);
-			background: linear-gradient(to right, rgba(156, 194, 131, 1) 20%, rgba(255,217,76,0.3));
-			border-bottom-right-radius: 10px;
-			border-bottom-left-radius: 10px;
 			>h2{
 				/*Título cabeçalho produto-destaqu da indexe*/
 				@include texto(38px, $white, 'Roboto Bold', 48px, null);
@@ -475,7 +470,7 @@ a{
 				@include texto(18px, $white, 'Roboto Regular', 24px, null);
 				width: 50%;
 			}
-			#header-flat-overlay-seemore{
+			#header-index-overlay-seemore{
 				/*Container do botão de ver mais do cabeçalho da index*/
 				@include display(flex, column, center, center);
 				width: 60px;

@@ -1,22 +1,12 @@
 @import 'mixins.scss';
 @import 'colors.scss';
 
-::-webkit-scrollbar{
-	/*Estilização da scrollbar*/
-	width: 7px;
-	background: transparent;
-}
-::-webkit-scrollbar-thumb{
-	/*Estilização da scrollbar*/
-	border-radius: 50px;
-	background-color: $olivine;
-}
 .main{
 	/*Container-mãe do block do site*/
 	@include bloco(100%, 1200px, auto);
 	@include display(flex, column);
 	background-color: $lightgrey;
-    margin: 124px auto 0px auto;
+    margin: 0px auto 0px auto;
 	z-index: 1;
 }
 
@@ -74,7 +64,7 @@
 /* GRID GENÉRICO */
 .generic-grid{
     /*Container-mãe da grelha genérica responsiva*/
-    @include bloco(100%, 100%, 100%, false);
+    @include bloco(100%, 100%);
     box-sizing: border-box;
     border: 30px solid transparent;
     margin: 0 auto;
